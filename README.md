@@ -8,5 +8,8 @@
 
 
 #to install the script shell
-git clone 
+git clone https://github.com/aissaabk/Make-it-easy.git
+cd Make-it-easy
+chmod 755 desktop
+./desktop
 
