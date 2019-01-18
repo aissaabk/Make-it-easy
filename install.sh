@@ -68,7 +68,8 @@ exit 0
 fi
 
 if [ $1 = "--uninstall" ] && [ $# = 1 ];then
-rm -
+rm -f $DESKTOPENRTRY_DIR
+rm /usr/bin/desktop
 
 
 
@@ -83,7 +84,7 @@ fi
 
 
 #and uninstall
-#chack all argument the parametre and the value
+#chack all argument the parametres and the values
 
 for (( i=1 ; i<=$# ; i++ ))
 do
