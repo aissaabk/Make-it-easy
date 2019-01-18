@@ -68,7 +68,7 @@ exit 0
 fi
 
 if [ $1 = "--uninstall" ] && [ $# = 1 ];then
-echo "remove parent directory with his content"
+echo "remove directory and her contents"
 rm -f $DESKTOPENRTRY_DIR
 echo "remove shurt link"
 rm /usr/bin/desktop
