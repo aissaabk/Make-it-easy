@@ -4,6 +4,8 @@ This is my first script
 
 This script creates a desktop shortcut in the Linux system
 
+work perfectly in gnome desktop
+
 for more information how use the script type desktop [--help/-h];
 
 
