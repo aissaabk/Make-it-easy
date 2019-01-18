@@ -73,17 +73,9 @@ rm -f $DESKTOPENRTRY_DIR
 echo "remove shurt link"
 rm /usr/bin/desktop
 echo "Done End uninstall"
-
-
-
-
-
-
-
-
-
-
-
+echo "check if programme uninstall correctly run"
+echo "#command -V desktop"
+exit 0
 fi
 
 
