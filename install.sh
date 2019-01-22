@@ -134,9 +134,9 @@ Version=1.0
 Type=Application
 Terminal=0" > "/usr/share/applications/$f"
 mv "/usr/share/applications/$f" "/usr/share/applications/$f.desktop"
-cp "/usr/share/applications/$f.desktop" "/$USER/Desktop/"
+cp "/usr/share/applications/$f.desktop" "/home/$USERNAME/Desktop/"
 chmod +x "/usr/share/applications/$f.desktop"
-chmod +x "$USER/Desktop/$f.desktop"
+chmod +x "/home/$USERNAME/Desktop/$f.desktop"
 echo "the Desktop Entry Create succefully"
 echo "Finish installation thank you for using my programme"
 echo "-----------------------------------------------------------------------"
