@@ -61,7 +61,7 @@ option :
 
 "
 echo -e "for help to  developed this application please donate my \033[0;36mhttp://www.google.com"
-echo -e "\033[0;39for more help send myby email at  \033[0;36mbelmelahmed@gmail.com"
+echo -e "\033[0;39mfor more help send myby email at  \033[0;36mbelmelahmed@gmail.com"
 echo -e "\033[0;39mfor how do use this script please type :desktop --help"
 echo -e "for \033[1;31muninstall do:desktop --uninstall"
 exit 0
