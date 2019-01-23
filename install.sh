@@ -118,6 +118,7 @@ if [ -z $icon ];then
 echo "you dont specife icon "
 fi
 #get the absulte name file
+ext=$(echo $value_script | awk  -F "." '{print $NF }')
 f="$(basename -s .* $value_script)"
 echo -e "write name for your application in desktop"
 read name
@@ -133,6 +134,7 @@ Categories=Application;$category_value
 Version=1.0
 Type=Application
 Terminal=0" > "/usr/share/applications/$f"
+f=$(basename -s .$ext $value_script)
 mv "/usr/share/applications/$f" "/usr/share/applications/$f.desktop"
 cp "/usr/share/applications/$f.desktop" "/home/$USERNAME/Desktop/"
 chmod +x "/usr/share/applications/$f.desktop"
