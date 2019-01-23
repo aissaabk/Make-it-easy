@@ -118,7 +118,7 @@ if [ -z $icon ];then
 echo "you dont specife icon "
 fi
 #get the absulte name file
-ext=$(echo $value_script | awk  -F "." '{print $NF }')
+ext=$(echo $value_script | awk -F "." '{ print $NF }')
 f="$(basename -s .* $value_script)"
 echo -e "write name for your application in desktop"
 read name
