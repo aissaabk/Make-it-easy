@@ -28,8 +28,9 @@ fi
 mkdir $DESKTOPENRTRY_DIR
 echo "create directory successfully"
 echo "create script programme ..."
+shell=$SHELL
 echo '
-#!$SHELL
+#!$shell
 
 #check permission 
 if [ $(id -u) -ne 0 ];then
@@ -118,7 +119,7 @@ if [ -z $icon ];then
 echo "you dont specife icon "
 fi
 #get the absulte name file
-ext=$(echo $value_script |awk -F "." `{ print $NF }`)
+ext=$(echo $value_script |awk -F "." '{ print $NF }')
 echo -e "write name for your application in desktop"
 read name
 echo -e "write a comment for your application"
