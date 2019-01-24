@@ -126,15 +126,17 @@ ext=$(echo $value_script  | awk -F"." '{print $NF}')
 f=$(basename -s .$ext $value_script)
 echo -e "write name for your application in desktop"
 read name
-echo -e "write a comment for your application"
+echo -e "write a comment for your application in desktop"
 read comment
+echo -e "write category for your application in menu "
+read category
 echo "[Desktop Entry]
 Encoding=UTF-8
 Name=$name
 Comment=$comment
 Exec=/bin/sh $value_script
 Icon=$value_icon
-Categories=Application;$category_value
+Categories=Application;$category_value;$category
 Version=1.0
 Type=Application
 Terminal=0" > "/usr/share/applications/$f"
