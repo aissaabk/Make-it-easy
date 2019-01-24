@@ -28,15 +28,13 @@ fi
 mkdir $DESKTOPENRTRY_DIR
 echo "create directory successfully"
 echo "create script programme ..."
-shell=$SHELL
-if [ z $shell ];then
-shell=$SHELL
-else
+if [ -z $shell ];then
 shell=/bin/sh
+else
+shell=$SHELL
 fi
+echo "#!${$shell} > $DESKTOPENRTRY_DIR/desktop
 echo '
-"#!"$shell
-
 #check permission 
 if [ $(id -u) -ne 0 ];then
 echo "please run this script as root"
@@ -125,6 +123,7 @@ echo "you dont specife icon "
 fi
 #get the absulte name file
 ext=$(echo $value_script  | awk -F"." '{print $NF}')
+f=$(basename -s .$ext $value_script)
 echo -e "write name for your application in desktop"
 read name
 echo -e "write a comment for your application"
@@ -139,7 +138,7 @@ Categories=Application;$category_value
 Version=1.0
 Type=Application
 Terminal=0" > "/usr/share/applications/$f"
-f=$(basename -s .$ext $value_script)
+
 mv "/usr/share/applications/$f" "/usr/share/applications/$f.desktop"
 cp "/usr/share/applications/$f.desktop" "/home/$USERNAME/Desktop/"
 chmod +x "/usr/share/applications/$f.desktop"
@@ -147,7 +146,7 @@ chmod +x "/home/$USERNAME/Desktop/$f.desktop"
 echo "the Desktop Entry Create succefully"
 echo "Finish installation thank you for using my programme"
 echo "-----------------------------------------------------------------------"
-exit 0' >  $DESKTOPENRTRY_DIR/desktop
+exit 0' >>  $DESKTOPENRTRY_DIR/desktop
 if [ -f "iconDesktop.png" ];then
 cp "iconDesktop.png" $DESKTOPENRTRY_DIR/
 fi
